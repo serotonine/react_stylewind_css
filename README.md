@@ -1,2 +1,4 @@
-# react_styling
-https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39835916#overview
+# react_tailwind_css
+
+https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39836064#overview
+cd

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { styled } from "styled-components";
-import CustomInput from "./styled-components/StyledInput";
+import CustomInput from "./styled-components/CustomInput";
 
 /*
  * Will created a div as a STYLED component
@@ -11,24 +11,6 @@ const ControlContainer = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-`;
-
-/*
- * How to handle the pseudo selectors.
- */
-const ControlButton = styled.button`
-  padding: 1rem 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 0.25rem;
-  color: #1f2937;
-  background-color: #f0b322;
-  border-radius: 6px;
-  border: none;
-
-  &:hover {
-    background-color: #f0920e;
-  }
 `;
 
 export default function AuthInputs() {
@@ -52,8 +34,11 @@ export default function AuthInputs() {
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
-    <div id="auth-inputs">
-      <ControlContainer>
+    <div
+      id="auth-inputs"
+      className="w-full max-w-sm p-8 rounded shadow-md bg-gradient-to-b from-stone-700 to-stone-800"
+    >
+      <div>
         <p>
           <CustomInput
             label="Email"
@@ -72,14 +57,20 @@ export default function AuthInputs() {
             }
           />
         </p>
-      </ControlContainer>
+      </div>
       <div className="actions">
-        <button type="button" className="text-button">
+        <button
+          type="button"
+          className="text-button text-amber-400 border-0 hover:text-amber-200 mr-2"
+        >
           Create a new account
         </button>
-        <ControlButton className="button" onClick={handleLogin}>
+        <button
+          className="button hover:bg-amber-400 focus:bg-amber-600"
+          onClick={handleLogin}
+        >
           Sign In
-        </ControlButton>
+        </button>
       </div>
     </div>
   );
