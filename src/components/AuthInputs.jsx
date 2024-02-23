@@ -38,7 +38,7 @@ export default function AuthInputs() {
       id="auth-inputs"
       className="w-full max-w-sm p-8 rounded shadow-md bg-gradient-to-b from-stone-700 to-stone-800"
     >
-      <div>
+      <div className="flex flex-col">
         <p>
           <CustomInput
             label="Email"
